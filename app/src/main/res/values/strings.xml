@@ -1,11 +1,23 @@
 <resources>
     <string name="app_name">Plant App</string>
-
+    <string name="reset_button">RESET</string>
+    <string name="dodaj_jelo">Dodaj jelo</string>
+    <string name="izmijeni_jelo">Izmijeni jelo</string>
 
     <string-array name="modovi_array">
         <item>Medicinski</item>
         <item>Kuharski</item>
         <item>Botanički</item>
+    </string-array>
+
+    <string-array name="flower_colors_array">
+        <item>red</item>
+        <item>blue</item>
+        <item>yellow</item>
+        <item>orange</item>
+        <item>purple</item>
+        <item>brown</item>
+        <item>green</item>
     </string-array>
 
 

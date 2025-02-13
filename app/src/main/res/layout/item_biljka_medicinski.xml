@@ -3,14 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="160dp"
+    android:background="@color/modesColor">
 
     <ImageView
         android:id="@+id/slikaItem"
-        android:layout_width="160dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="6dp"
+        android:layout_width="149dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nazivItem"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
@@ -18,58 +23,66 @@
     <TextView
         android:id="@+id/nazivItem"
         android:layout_width="225dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="290dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="14dp"
         android:text="Naziv biljke"
-        app:layout_constraintBottom_toTopOf="@+id/upozorenjeItem"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+
+        android:textAlignment="gravity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/slikaItem"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/upozorenjeItem"
         android:layout_width="225dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="14dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="9dp"
         android:layout_marginEnd="10dp"
         android:text="Tekst upozorenja"
+        android:textColor="@color/textColorOther"
+
+        android:textAlignment="gravity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/slikaItem"
         app:layout_constraintTop_toBottomOf="@+id/nazivItem" />
 
     <TextView
         android:id="@+id/korist1Item"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="289dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
         android:text=" korist 1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/slikaItem" />
+        android:textColor="@color/textColorOther"
+
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/korist2Item"
+        app:layout_constraintTop_toBottomOf="@+id/upozorenjeItem" />
 
     <TextView
         android:id="@+id/korist2Item"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_marginStart="17dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="289dp"
         android:text=" korist 2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/textColorOther"
+
+        android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@+id/korist3Item"
-        app:layout_constraintStart_toEndOf="@+id/korist1Item" />
+        app:layout_constraintTop_toBottomOf="@+id/upozorenjeItem" />
 
     <TextView
         android:id="@+id/korist3Item"
         android:layout_width="65dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="289dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
         android:text=" korist 3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="@color/textColorOther"
+
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upozorenjeItem" />
 </androidx.constraintlayout.widget.ConstraintLayout>

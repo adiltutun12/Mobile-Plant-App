@@ -1,18 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/modesColor">
 
-    <Spinner
-        android:id="@+id/modSpinner"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchLayout"
         android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:entries="@array/modovi_array" /> <!-- Ovo će napuniti Spinner s vašim modovima -->
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/pretragaET"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:hint="Unesite podstring"
+            android:textAlignment="viewStart"
+            android:textColorHint="#1E1D1D"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/bojaSPIN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <Spinner
+            android:id="@+id/bojaSPIN"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:background="@drawable/spinner_background"
+
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/brzaPretraga"
+            app:layout_constraintStart_toEndOf="@+id/pretragaET"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <Button
+            android:id="@+id/brzaPretraga"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="5dp"
+            android:text="Brza pretraga"
+            android:textStyle="bold"
+
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bojaSPIN"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/modSpinner"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/spinner_background"
+            android:entries="@array/modovi_array"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/resetBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/novaBiljkaBtn"
+            app:layout_constraintStart_toEndOf="@+id/modSpinner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/novaBiljkaBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="5dp"
+            android:text="Dodaj novu biljku"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/resetBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/biljkeRV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" /> <!-- Ovo će zauzeti ostatak prostora na ekranu -->
+        android:layout_weight="1" />
 
 </LinearLayout>
