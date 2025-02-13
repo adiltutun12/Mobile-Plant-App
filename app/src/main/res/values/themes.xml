@@ -1,9 +1,27 @@
+<!--
+
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.PlantApp" parent="Theme.Material3.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="Theme.PlantApp" parent="Base.Theme.PlantApp" />
+</resources>
+
+-->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.PlantApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/themeColor</item>
+        <item name="colorPrimaryVariant">@color/themeColor</item>
+        <item name="colorOnPrimary">@color/white</item> <!-- Preporučeno je koristiti bijelu ili drugu svijetlu boju za tekst i ikone koji će se pojaviti na primarnoj boji. -->
+        <!-- Možete dodati još customizacija po želji -->
     </style>
 
-    <style name="Theme.PlantApp" parent="Base.Theme.PlantApp" />
+    <style name="Theme.PlantApp" parent="Base.Theme.PlantApp">
+        <!-- Dodatne specifične customizacije za Theme.PlantApp ako je potrebno -->
+    </style>
 </resources>

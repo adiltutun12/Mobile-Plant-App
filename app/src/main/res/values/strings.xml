@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Plant App</string>
-
+    <string name="reset_button">RESET</string>
+    <string name="dodaj_jelo">Dodaj jelo</string>
+    <string name="izmijeni_jelo">Izmijeni jelo</string>
 
     <string-array name="modovi_array">
         <item>Medicinski</item>
