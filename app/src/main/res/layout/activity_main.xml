@@ -1,18 +1,37 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/modesColor">
 
-    <Spinner
-        android:id="@+id/modSpinner"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:entries="@array/modovi_array" /> <!-- Ovo će napuniti Spinner s vašim modovima -->
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/modSpinner"
+            android:layout_width="320dp"
+            android:layout_height="58dp"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_background"
+            android:entries="@array/modovi_array" />
+
+        <Button
+            android:id="@+id/resetBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Reset"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/biljkeRV"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" /> <!-- Ovo će zauzeti ostatak prostora na ekranu -->
+        android:layout_weight="1" />
 
 </LinearLayout>

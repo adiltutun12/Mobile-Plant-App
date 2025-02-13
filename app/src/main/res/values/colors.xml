@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="themeColor">#1C491A</color> <!-- boja teme aplikacije -->
+    <color name="modesColor">#B6E8B8</color> <!-- boja layouta-->
+    <color name="spinnerColor">#94C596</color> <!-- boja layouta-->
+    <color name="textColor">#09300A</color> <!-- boja naziva-->
+    <color name="textColorOther">#161716</color> <!-- boja opisa-->
+
+
 </resources>
