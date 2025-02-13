@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/modSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:entries="@array/modovi_array" /> <!-- Ovo će napuniti Spinner s vašim modovima -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/biljkeRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" /> <!-- Ovo će zauzeti ostatak prostora na ekranu -->
+
+</LinearLayout>

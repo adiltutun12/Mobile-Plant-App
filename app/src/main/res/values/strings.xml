@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Plant App</string>
+
+
+    <string-array name="modovi_array">
+        <item>Medicinski</item>
+        <item>Kuharski</item>
+        <item>Botanički</item>
+    </string-array>
+
+
+</resources>
